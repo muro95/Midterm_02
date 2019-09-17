@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>P_1</title>
+</head>
+<body>
+
+</body>
+<script>
+    let listOfPha = [];
+    let Pharmacist = function (id, name, age, address) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.address = address;
+
+        this.getId = function () {
+            return this.id;
+        };
+        this.getName = function () {
+            return this.name;
+        };
+
+        this.getAge = function () {
+            return this.age;
+        };
+        this.getAddress = function () {
+            return this.address;
+        };
+        this.setID = function (id) {
+            this.id = id;
+        };
+        this.setName = function (name) {
+            this.name = name;
+        };
+        this.setAge = function (age) {
+            this.age = age;
+        };
+        this.setAddress = function (address) {
+            this.address = address;
+        };
+    };
+    let PharmacistManger = function () {
+        this.add = function (id, name, age, address) {
+            let singleObj = {};
+            singleObj['id'] = id;
+            singleObj['name'] = name;
+            singleObj['age'] = age;
+            singleObj['address'] = address;
+            listOfPha.push(singleObj);
+
+        };
+        this.show = function () {
+            for (let i = 0; i < listOfPha.length; i++){
+                console.log(listOfPha[i]);
+            };
+                };
+    };
+    let pharmacistManger = new PharmacistManger();
+    let pharmacist = new Pharmacist(1, 'Mon', 18, 'HaNoi');
+    let pharmacist2 = new Pharmacist(2, 'Dora', 24, 'Hanoi');
+    let pharmacist3 = new Pharmacist(3, 'Kira', 25, 'CanTho');
+    let pharmacist4 = new Pharmacist(4, 'Shira', 20, 'HoChiMinh');
+    let pharmacist5 = new Pharmacist(5, 'Min', 28, 'DaNang');
+
+    let id1 = pharmacist.getId();
+    let name1 = pharmacist.getName();
+    let age1 = pharmacist.getAge();
+    let address1 = pharmacist.getAddress();
+
+    let id2 = pharmacist2.getId();
+    let name2 = pharmacist2.getName();
+    let age2 = pharmacist2.getAge();
+    let address2 = pharmacist2.getAddress();
+
+    let id3 = pharmacist3.getId();
+    let name3 = pharmacist3.getName();
+    let age3 = pharmacist3.getAge();
+    let address3 = pharmacist3.getAddress();
+
+    let id4 = pharmacist4.getId();
+    let name4 = pharmacist4.getName();
+    let age4 = pharmacist4.getAge();
+    let address4 = pharmacist4.getAddress();
+
+    let id5 = pharmacist5.getId();
+    let name5 = pharmacist5.getName();
+    let age5 = pharmacist5.getAge();
+    let address5 = pharmacist5.getAddress();
+
+
+    pharmacistManger.add(id1, name1, age1, address1);
+    pharmacistManger.add(id2,name2, age2, address2);
+    pharmacistManger.add(id3,name3, age3, address3);
+    pharmacistManger.add(id4,name4, age4, address4);
+    pharmacistManger.add(id5,name5, age5, address5);
+    pharmacistManger.show();
+
+</script>
+</html>
