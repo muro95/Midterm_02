@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    class Pharmacist{
+        constructor(id, name, age, address) {
+            this._id = id;
+            this._name = name;
+            this._age = age;
+            this._address = address;
+        }
+        get id() {
+            return this._id;
+        }
+        set id(value) {
+            this._id = value;
+        }
+        get name() {
+            return this._name;
+        }
+        set name(value) {
+            this._name = value;
+        }
+        get age() {
+            return this._age;
+        }
+        set age(value) {
+            this._age = value;
+        }
+        get address() {
+            return this._address;
+        }
+        set address(value) {
+            this._address = value;
+        }
+    }
+    
+    class PharmacistManager{
+        arr = new Array();
+        // constructor() {
+        //    let arr = new Array();
+        // }
+        addPharmacist(pharmacist){
+            this.arr.push(pharmacist);
+            //return arr;
+        }
+        displayPharmacist(){
+            for (let i = 0; i < this.arr.length; i++) {
+                alert(this.arr[i]._name + " have id : " + this.arr[i]._id + ", age: " + this.arr[i]._age + ", address: " + this.arr[i]._address);
+            }
+        }
+    }
+    let p1 = new Pharmacist(1, "nguyen van a", 10, "ha noi");
+    let p2 = new Pharmacist(2, "tran b", 15, "da nang");
+    let p3  = new Pharmacist(3, "ho c", 12, "sai gon");
+    let listPharmacist = new PharmacistManager();
+    listPharmacist.addPharmacist(p1);
+    listPharmacist.addPharmacist(p2);
+    listPharmacist.addPharmacist(p3);
+    //console.log(listPharmacist.displayPharmacist());
+    listPharmacist.displayPharmacist();
+</script>
+
+</body>
+</html>
